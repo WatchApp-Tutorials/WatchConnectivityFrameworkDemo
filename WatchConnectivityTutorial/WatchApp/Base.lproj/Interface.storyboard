@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchApp" customModuleProvider="target">
+                    <items>
+                        <label width="136" height="49" alignment="left" text="Label" textAlignment="center" id="F2A-wQ-85u"/>
+                        <group width="1" alignment="left" id="2Wa-9c-XqY">
+                            <items>
+                                <button width="0.5" alignment="left" title="Send To iPhone" id="hOd-7T-maB">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="sendMessageToiPhone" destination="AgC-eL-Hgc" id="9dl-M7-L6x"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="See Details" id="Er9-cP-ztv">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <segue destination="y3Q-Ft-RBF" kind="push" id="BcQ-Fx-9xY"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="lblMessage" destination="F2A-wQ-85u" id="x7E-ri-HzQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="154" y="388"/>
+        </scene>
+        <!--LabelDetails-->
+        <scene sceneID="iGA-Ha-zch">
+            <objects>
+                <controller identifier="LabelDetails" hidesWhenLoading="NO" id="y3Q-Ft-RBF" customClass="DetailView" customModule="WatchApp_Extension">
+                    <items>
+                        <label width="136" height="100" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" numberOfLines="3" id="d3E-AY-OrI">
+                            <color key="textColor" red="0.94509803920000002" green="0.38431372549999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="detailLabel" destination="d3E-AY-OrI" id="umO-Ok-gRG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="410" y="388"/>
+        </scene>
+    </scenes>
+</document>

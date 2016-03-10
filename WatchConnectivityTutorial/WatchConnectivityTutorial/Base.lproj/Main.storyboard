@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WatchConnectivityTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epi-hh-Q74">
+                                <rect key="frame" x="20" y="142" width="560" height="79"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROn-gh-XX9">
+                                <rect key="frame" x="184" y="360" width="233" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.93333339689999995" green="0.93725496529999996" blue="0.75294125079999996" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="zkK-hC-mWE"/>
+                                </constraints>
+                                <state key="normal" title="Send Message To Watch"/>
+                                <connections>
+                                    <action selector="sendMessageToWatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHz-jh-wBn"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What is your name ?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cX-m7-CK5">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.88235294119999996" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6cX-m7-CK5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1CW-Mf-bvp"/>
+                            <constraint firstItem="6cX-m7-CK5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="G2f-bp-0Er"/>
+                            <constraint firstItem="epi-hh-Q74" firstAttribute="trailing" secondItem="6cX-m7-CK5" secondAttribute="trailing" id="Hlp-ca-gl3"/>
+                            <constraint firstItem="epi-hh-Q74" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PrS-Zo-cjZ"/>
+                            <constraint firstItem="6cX-m7-CK5" firstAttribute="centerX" secondItem="ROn-gh-XX9" secondAttribute="centerX" id="QG0-IJ-TQU"/>
+                            <constraint firstItem="epi-hh-Q74" firstAttribute="leading" secondItem="6cX-m7-CK5" secondAttribute="leading" id="Uae-18-Jg1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ROn-gh-XX9" secondAttribute="bottom" constant="210" id="VTL-NB-CvZ"/>
+                            <constraint firstItem="6cX-m7-CK5" firstAttribute="top" secondItem="epi-hh-Q74" secondAttribute="bottom" constant="64" id="dAE-wz-oXM"/>
+                            <constraint firstItem="epi-hh-Q74" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="122" id="gJ1-sX-ULf"/>
+                            <constraint firstItem="ROn-gh-XX9" firstAttribute="top" secondItem="6cX-m7-CK5" secondAttribute="bottom" constant="45" id="vhG-k5-rin"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblMessage" destination="epi-hh-Q74" id="ihU-9g-5OL"/>
+                        <outlet property="txtvwUserName" destination="6cX-m7-CK5" id="jqk-3v-5iN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="389"/>
+        </scene>
+    </scenes>
+</document>
